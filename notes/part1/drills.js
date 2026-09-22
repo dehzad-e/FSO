@@ -35,14 +35,18 @@ const toUpper = (array) => array.map((string) => string.toUpperCase());
 console.log(toUpper(strings));
 
 // makeIdGenerator()
-function makeIdGenerator() {
-  let id = 0;
+function makeIdGenerator(startAt) {
+  let id = startAt - 1;
   return function () {
     id += 1;
     return id;
   };
 }
 
-const idGenerator = makeIdGenerator();
-console.log(idGenerator());
-console.log(idGenerator());
+const gen1 = makeIdGenerator(1);
+console.log(gen1());
+console.log(gen1());
+
+const gen2 = makeIdGenerator(50);
+console.log(gen2());
+console.log(gen2());
