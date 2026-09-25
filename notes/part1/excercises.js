@@ -1,7 +1,4 @@
-let x = 4;
+const numbers = { left: 0, right: 0 };
 
-const printFour = () => {
-  console.log(x);
-};
-
-printFour();
+console.log(...numbers);
+console.log(numbers);
