@@ -1,10 +1,17 @@
+import { useState } from "react";
+
 const App = () => {
-  const friends = ["Peter", "Maya"];
-  console.log(friends);
+  const [counter, setCounter] = useState(0);
+
+  const increaseByOne = () => setCounter(counter + 1);
+  const setToZero = () => setCounter(0);
+  console.log("renderdering", counter);
 
   return (
     <div>
-      <p>{friends}</p>
+      <div>{counter}</div>
+      <button onClick={increaseByOne}>Plus</button>
+      <button onClick={setToZero}>Reset</button>
     </div>
   );
 };

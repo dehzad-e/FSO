@@ -1,3 +1,7 @@
-const arr = [{ name: "Ehsan" }, { name: "Dehzad" }];
+let x = 4;
 
-console.log(arr[0]);
+const printFour = () => {
+  console.log(x);
+};
+
+printFour();
