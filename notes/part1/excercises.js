@@ -1,4 +1,3 @@
-const numbers = { left: 0, right: 0 };
+const obj = { name: "Ehsan", age: 25, name: "Dezhad" };
 
-console.log(...numbers);
-console.log(numbers);
+console.log(obj["name"]);
