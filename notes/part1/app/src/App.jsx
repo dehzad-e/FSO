@@ -3,11 +3,17 @@ import { useState } from "react";
 const NameEcho = () => {
   const [name, setName] = useState("");
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("submitted: ", name);
+    setName("");
+  };
+
   return (
-    <div>
+    <form onSubmit={handleSubmit}>
       <input value={name} onChange={(event) => setName(event.target.value)} />
-      <p>You typed: {name}</p>
-    </div>
+      <button type="submit">Save</button>
+    </form>
   );
 };
 
