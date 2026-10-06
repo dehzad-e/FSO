@@ -5,7 +5,7 @@ const NameEcho = () => {
 
   return (
     <div>
-      <input value={name} />
+      <input value={name} onChange={(event) => setName(event.target.value)} />
       <p>You typed: {name}</p>
     </div>
   );
