@@ -6,17 +6,7 @@ let animals = [
   { name: "Ursula", species: "cat" },
   { name: "Jimmy", species: "fish" },
 ];
-const isDog = (animal) => {
-  return animal.species === "dog";
-};
 
-let dogs = animals.filter(isDog);
+let names = animals.map((animal) => animal.name + " is " + animal.species);
 
-// let dogs = [];
-// for (let i = 0; i < animals.length; i++) {
-//   if (animals[i].species === "dog") {
-//     dogs.push(animals[i]);
-//   }
-// }
-
-console.log(dogs);
+console.log(names);
