@@ -1,12 +1,9 @@
-let animals = [
-  { name: "Fluffykins", species: "rabbit" },
-  { name: "Caro", species: "dog" },
-  { name: "Hamilton", species: "dog" },
-  { name: "Harold", species: "fish" },
-  { name: "Ursula", species: "cat" },
-  { name: "Jimmy", species: "fish" },
+let orders = [
+  { amount: 250 },
+  { amount: 400 },
+  { amount: 100 },
+  { amount: 325 },
 ];
 
-let names = animals.map((animal) => animal.name + " is " + animal.species);
-
-console.log(names);
+let totalAmount = orders.reduce((sum, order) => sum + order.amount, 0);
+console.log(totalAmount);
